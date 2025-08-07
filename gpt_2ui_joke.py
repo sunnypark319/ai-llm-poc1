@@ -13,7 +13,7 @@ client = OpenAI(api_key=api_key)
 if st.button("캐시 초기화"):
     st.cache_data.clear()
     st.cache_resource.clear()
-    st.experimental_rerun()
+    st.rerun()
 
 # 페이지 기본 설정
 st.set_page_config(page_title="🃏 조커와 대화하기", layout="wide")
