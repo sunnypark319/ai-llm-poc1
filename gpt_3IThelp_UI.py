@@ -270,7 +270,8 @@ class ITHelpdeskWebApp:
         
     def _initialize_openai(self):
         """OpenAI 클라이언트 초기화"""
-        api_key = os.getenv('OPENAI_API_KEY')
+        
+        api_key = st.secrets["OPENAI_API_KEY"]
         if not api_key:
             st.error("❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.")
             st.info("💡 .env 파일에 OPENAI_API_KEY=your_api_key_here 를 추가하세요.")
