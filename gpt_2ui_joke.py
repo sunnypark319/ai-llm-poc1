@@ -5,8 +5,8 @@ import os
 
 # 환경 변수 로드
 load_dotenv()
-# api_key = os.getenv("OPENAI_API_KEY")
-api_key = st.secrets["OPENAI_API_KEY"]
+api_key = os.getenv("OPENAI_API_KEY")
+
 client = OpenAI(api_key=api_key)
 
 # 캐시 초기화 버튼
